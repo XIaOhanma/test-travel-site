@@ -2,12 +2,21 @@
 
   @mixin clearFix;
 
+  &--t-padding{
+    padding-top: 80px;
+  }
+
   &--gutter{
     margin-right: -65px;
   }
 
+
   &--gutter-larger{
     margin-right: -100px;
+  }
+
+  &--gutter-small{
+    margin-right: -45px;
   }
 
   &--gutter > div{
@@ -16,6 +25,10 @@
 
   &--gutter-larger > div {
     padding-right: 100px;
+  }
+
+  &--gutter-small > div {
+    padding-right:45px;
   }
 
   @mixin atMedium {
@@ -33,6 +46,20 @@
     &__medium-6{
       float:left;
       width: 50%;
+    }
+
+  }
+
+  /*Equal height at medium*/
+  &--equal-height-medium{
+    @mixin atMedium{
+      display: flex;
+
+
+    }
+    & > div {
+      display: flex;
+      float: none;
     }
 
   }
